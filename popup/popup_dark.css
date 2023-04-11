@@ -1,0 +1,88 @@
+@font-face {
+    font-family: 'pt-sans-regular';
+    src: url(/public/fonts/ptsans_regular.ttf);
+}
+
+* {
+    box-sizing: border-box;
+    font-size: 18px;
+    line-height: 150%;
+    padding: 0;
+    margin: 0;
+    font-family: 'pt-sans-regular', sans-serif;
+}
+
+body {
+    width: 500px;
+    background-color: #333;
+    color: #aaa;
+    transition: all .5s;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+.toggle_button {
+    display: inline;
+    border: none;
+    border-radius: 0.75em;
+    width: 3em;
+    min-width: 3em;
+    background-color: lightsteelblue;
+}
+
+.toggle_button:hover {
+    outline: 1px solid steelblue;
+}
+
+.toggle_button span {
+    display: inline-block;
+    height: 1.5em;
+    width: 1.5em;
+    border-radius: 0.75em;
+    background-color: #eee;
+    outline: 1px solid steelblue;
+    float:left;
+}
+
+.toggle_button_active {
+    background-color: steelblue;
+}
+
+.toggle_button_active span {
+    float:right;
+    background-color: ghostwhite;
+}
+
+.config_description_span p,
+.header > span > span > span,
+.header p {
+    font-size: 0.75em;
+    color: slategray;
+    margin-right: 2em;
+}
+
+.config_div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1em;
+}
+
+.header {
+    margin: 1em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.header > img {
+    margin-right: 1em;
+}
+
+.header h1 {
+    display: inline;
+    margin-right: 0.25em;
+}

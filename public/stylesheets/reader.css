@@ -1,0 +1,132 @@
+#reader,
+#toast,
+#reader *,
+#toast * {
+    transition: background-color 0.5s, color 0.5s;
+    filter:none !important;
+}
+
+#reader {
+    /**this is the modal container*/
+    box-sizing: border-box;
+    position: fixed;
+    display: none;
+    top: 0;
+    /*max-width: 100vw;*/
+    max-height: 66vh;
+    /*width: 100vw;*/
+    overflow: auto;
+    background-color: #eeec;
+    box-shadow: 0px 5px 10px #0005;
+    backdrop-filter: blur(8px);
+    padding: 20px;
+    margin: 0;
+    cursor: text;
+
+    font-family: Georgia, serif;
+    color: #555;
+    line-height: 150%;
+}
+
+#toast {
+    box-sizing: border-box;
+    position:fixed;
+    bottom: 1em;
+    background-color: #eee;
+    box-shadow: 0px 5px 10px #0005;
+    border-radius: 1em;
+    opacity: 0;
+    padding: 20px;
+    transition: opacity 0.5s;
+    color:#555;
+    line-height: 150%;
+    font-family: 'pt-sans-regular', sans-serif;
+}
+
+#toast > span {
+    font-family: 'pt-sans-bold', sans-serif;
+    color: #5a5;
+}
+
+/** Select all child elements of #reader.
+ * Using `  selects all descendants regardless of where they are.
+ * Using `>` only selects the immediate descendants of the element.
+ */
+#reader * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    line-height: inherit;
+}
+
+
+#reader_content, #reader_content p {
+    font-family: Georgia, serif;
+    color: #555;
+}
+
+#reader_content code {
+    font-family: 'fira-code-variable', monospace;
+    background-color: #ddd;
+}
+
+#reader_content span {
+    font-family: 'pt-sans-regular', sans-serif;
+    color: #555;
+}
+
+#reader_content em,
+#reader_content i {
+    font-style: italic;
+    color: #000;
+}
+
+#reader_content a {
+    color: #55a;
+    text-decoration-line: underline;
+    text-decoration-thickness: from-font;
+}
+
+#reader_content blockquote {
+    border-left: 1px solid #a5a;
+    padding-left: 0.5em;
+    color: #a5a;
+}
+
+#reader_content h1 {
+    font-size: 2em;
+}
+
+#reader_content h2 {
+    font-size: 1.8333em;
+}
+
+#reader_content h3 {
+    font-size: 1.6666;
+}
+
+#reader_content h4 {
+    font-size: 1.4999;
+}
+
+#reader_content h5 {
+    font-size: 1.3332;
+}
+
+#reader_content h6 {
+    font-size: 1.1665;
+}
+
+.reader_hovering {
+    color: #aa5;
+    outline: 1px solid #aa5;
+}
+
+#reader .reader_hovering {
+    color: unset;
+    outline:none;
+}

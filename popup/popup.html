@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Character Counter</title>
+        <link id="stylesheet" rel="stylesheet" href="popup.css">
+    </head>
+    <body>
+        <div class="header">
+            <img id="header_icon" src="/icons/logo128x128.png" height="64" width="64" />
+            <span>
+                <span><h1>Modal Reader</h1><span>by Bailey Liang</span></span>
+                <p>Double-click text on a webpage to open it in a modal reader designed to improve readability.</p>
+            </span>
+        </div>
+
+        <div class="config_div">
+            <span class="config_description_span">
+                Enable extension
+                <p>Control whether or not this extension is active.</p>
+            </span>
+            <button id="enable_extension_toggle" class="toggle_button"><span>​</span></button>
+        </div>
+
+        <div class="config_div">
+            <span class="config_description_span">
+                Hide reader on-scroll.
+                <p>Hide the modal reader whenever you scroll on the main webpage.</p>
+            </span>
+            <button id="hide_onscroll_toggle" class="toggle_button"><span>​</span></button>
+        </div>
+
+        <div class="config_div">
+            <span class="config_description_span">
+                Insert line break after sentence.
+                <p>Insert a line break after each sentence inside the modal reader. (Experimental)</p>
+            </span>
+            <button id="sentence_line_break_toggle" class="toggle_button"><span>​</span></button>
+        </div>
+
+        <div class="config_div">
+            <span class="config_description_span">
+                Double line breaks.
+                <p>Line breaks are applied twice inside the modal reader.</p>
+            </span>
+            <button id="double_line_break_toggle" class="toggle_button"><span>​</span></button>
+        </div>
+
+        <div class="config_div">
+            <span class="config_description_span">
+                Detect system dark mode.
+                <p>Changes the modal reader's theme based on your browser's theme settings.</p>
+            </span>
+            <button id="detect_dark_mode_toggle" class="toggle_button"><span>​</span></button>
+        </div>
+
+        <div class="config_div">
+            <span class="config_description_span">
+                Highlight readable elements on-hover.
+                <p>Webpage elements that can be read inside the modal reader are highlighted whenever your mouse cursor hovers over them. (Experimental)</p>
+            </span>
+            <button id="highlight_readable_toggle" class="toggle_button"><span>​</span></button>
+        </div>
+
+        <div class="config_div">
+            <span class="config_description_span">
+                Copy modal reader content to clipboard.
+                <p>When you double-click to open the modal reader, the text inside the modal reader also gets copied to your clipboard automatically.</p>
+            </span>
+            <button id="copy_to_clipboard_toggle" class="toggle_button"><span>​</span></button>
+        </div>
+
+        <!--
+        <div class="config_div">
+            <span class="config_description_span">
+                Lorem Ipsum
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed</p>
+            </span>
+            <button id="lorem_ipsum" class="toggle_button"><span>​</span></button>
+        </div>
+        -->
+
+        <script src="popup.js"></script>
+    </body>
+</html>

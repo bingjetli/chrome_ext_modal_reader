@@ -70,7 +70,7 @@ const stripAttributes = html => {
 
 
 const insertSentenceLineBreaks = html => {
-    return html.replaceAll(/((?:[A-z0-9]+)(?:\s\S+){2,})([\.\?\!]+)/g, '$1$2<br>');
+    return html.replaceAll(/((?:[A-z0-9]+)(?:\s[^\.\?\!\s]+){2,})([\.\?\!]+)/g, '$1$2<br>');
 };
 
 const stripSvg = html => {

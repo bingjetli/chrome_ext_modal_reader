@@ -70,7 +70,7 @@ const stripAttributes = html => {
 
 
 const insertSentenceLineBreaks = html => {
-    return html.replaceAll(/((?:[A-z0-9]+)(?:\s[^\.\?\!\s]+){2,})([\.\?\!]+)/g, '$1$2<br>');
+    return html.replaceAll(/((?:[A-z0-9]+)(?:\s[^\.\?\!\s]+){2,})([\.\?\!]+)/g, '$1$2 <br>');
 };
 
 const stripSvg = html => {
@@ -243,7 +243,10 @@ chrome.storage.sync.get(null, config => {
             content.innerHTML = content.innerHTML.replaceAll(/(?:\s*\<br\>\s*){2}(\s*\<\/.*\>)*\s*$/g, '$1');
 
             //remove line breaks inside links
-            content.innerHTML = content.innerHTML.replaceAll(/(?<!\<a\>[\s.]*)(\<br\>){2}(?![\s.]*\<\/a\>)/g, '');
+            content.innerHTML = content.innerHTML.replaceAll(/(?<=\<a\>.*)\s*\<br\>\s*(?=.*\<\/a\>)/g, '');
+
+            //remove line breaks inside paired punctuations
+            content.innerHTML = content.innerHTML.replaceAll(/(?<=\([^\)]*)\s*\<br\>\s*(?=[^\(]*\))/g, '');
 
             //remove any SVG elements
             //content.innerHTML = stripSvg(content.innerHTML);
